@@ -1,6 +1,7 @@
-from django.conf.urls import *
+from django.conf import url
 
-urlpatterns = patterns(
-    'django_skebby.views',
-    (r'credit_left/$', 'credit_left', {}, 'skebby-credit-left'),
-)
+from views import credit_left
+
+urlpatterns = [
+    url(r'credit_left/$', credit_left, {}, 'skebby-credit-left'),
+]
